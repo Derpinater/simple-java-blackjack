@@ -9,11 +9,15 @@ public class Game {
 
   
     ArrayList<Integer> playerHand = setPlayerHand(cardDeck);
+    System.out.print("Player hand: " + playerHand);
+
+    ArrayList<Integer> dealerHand = setDealerHand(cardDeck);
+    System.out.print("Dealer hand: " + dealerHand);
     
   }
 
   // plans to make this in a Moves.java file.
-  private static ArrayList<Integer> setPlayerHand(ArrayList<Integer> targetList)  {
+  private static ArrayList<Integer> setPlayerHand(ArrayList<Integer> targetList) {
     ArrayList<Integer> playerHand = new ArrayList<Integer>();
     playerHand.add(targetList.get(0));
     playerHand.add(targetList.get(1));
@@ -24,7 +28,7 @@ public class Game {
     return playerHand;
   }
 
-  private static ArrayList<Integer> setDealerHand(ArrayList<Integer> targetList)  {
+  private static ArrayList<Integer> setDealerHand(ArrayList<Integer> targetList) {
     ArrayList<Integer> dealerHand = new ArrayList<Integer>();
     dealerHand.add(targetList.get(0));
     dealerHand.add(targetList.get(1));
