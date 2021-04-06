@@ -1,23 +1,13 @@
 import java.util.ArrayList;
 
 public class Game {
-  public static void main(String[] args) {
-    Deck deckObj = new Deck();
 
-    ArrayList<Integer> cardDeck = deckObj.getDeck();
-    cardDeck = deckObj.shuffleDeck(cardDeck);
+  /*
+  * These are the methods that are performed by the rules of the games.
+  * This involves "hit", "stand", and calclating if the dealer or the player is over 21
+  */
 
-  
-    ArrayList<Integer> playerHand = setPlayerHand(cardDeck);
-    System.out.print("Player hand: " + playerHand);
-
-    ArrayList<Integer> dealerHand = setDealerHand(cardDeck);
-    System.out.print("Dealer hand: " + dealerHand);
-    
-  }
-
-  // plans to make this in a Moves.java file.
-  private static ArrayList<Integer> setPlayerHand(ArrayList<Integer> targetList) {
+  public ArrayList<Integer> setPlayerHand(ArrayList<Integer> targetList) {
     ArrayList<Integer> playerHand = new ArrayList<Integer>();
     playerHand.add(targetList.get(0));
     playerHand.add(targetList.get(1));
@@ -28,7 +18,7 @@ public class Game {
     return playerHand;
   }
 
-  private static ArrayList<Integer> setDealerHand(ArrayList<Integer> targetList) {
+  public ArrayList<Integer> setDealerHand(ArrayList<Integer> targetList) {
     ArrayList<Integer> dealerHand = new ArrayList<Integer>();
     dealerHand.add(targetList.get(0));
     dealerHand.add(targetList.get(1));
