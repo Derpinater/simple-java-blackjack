@@ -7,9 +7,9 @@ public class Game {
     ArrayList<Integer> cardDeck = deckObj.getDeck();
     cardDeck = deckObj.shuffleDeck(cardDeck);
 
-    System.out.println(cardDeck);
+  
     ArrayList<Integer> playerHand = setPlayerHand(cardDeck);
-    System.out.println(cardDeck);
+    
   }
 
   // plans to make this in a Moves.java file.
@@ -22,5 +22,16 @@ public class Game {
     targetList.remove(1);
 
     return playerHand;
+  }
+
+  private static ArrayList<Integer> setDealerHand(ArrayList<Integer> targetList)  {
+    ArrayList<Integer> dealerHand = new ArrayList<Integer>();
+    dealerHand.add(targetList.get(0));
+    dealerHand.add(targetList.get(1));
+
+    targetList.remove(0);
+    targetList.remove(1);
+
+    return dealerHand;
   }
 }
