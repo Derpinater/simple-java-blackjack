@@ -36,6 +36,7 @@ public class Exec {
           break;
       }
     } while (decision != 1);
+    // put dealer code here
     input.close();
   }
 
